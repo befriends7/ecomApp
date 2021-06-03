@@ -1,0 +1,6 @@
+package com.rovero.ecom;
+
+import io.flutter.embedding.android.FlutterActivity;
+
+public class MainActivity extends FlutterActivity {
+}
