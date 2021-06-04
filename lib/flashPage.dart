@@ -1,12 +1,19 @@
 
 
+import 'package:ecom/authService.dart';
 import 'package:ecom/homeModel.dart';
 import 'package:ecom/setUpLocator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+
+
 class flashPage extends StatelessWidget {
+
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -48,7 +55,12 @@ class flashPage extends StatelessWidget {
 
                             padding: EdgeInsets.only(left: 30,right: 30),
 
-                            child: RaisedButton(onPressed: (){
+                            child: RaisedButton(onPressed: () async{
+
+
+                            User user = await model.authEmail();
+                            User usr =  user;
+
 
                             },
 
@@ -75,10 +87,12 @@ class flashPage extends StatelessWidget {
 
                             child: RaisedButton(
 
+
                               color: Color(0xFF16c79a),
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
 
-                              onPressed: (){
+                              onPressed: () async{
+
 
                               },
 
